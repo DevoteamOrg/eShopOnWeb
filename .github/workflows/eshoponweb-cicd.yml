@@ -8,7 +8,7 @@ env:
   RESOURCE-GROUP: rg-eshoponweb-exe
   LOCATION: westeurope
   TEMPLATE-FILE: infra/webapp.bicep
-  SUBSCRIPTION-ID: ${{ secrets.SUBSCRIPTION_GITHUB_WORKFLOW_TEST }}
+  SUBSCRIPTION-ID: ${{ secrets.SUBSCRIPTION_GITHUB_WORKFLOW_TEST_ID }}
   WEBAPP-NAME: eshoponweb-webapp-first
 
 
