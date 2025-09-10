@@ -8,7 +8,7 @@ env:
   RESOURCE-GROUP: rg-eshoponweb-exe
   LOCATION: westeurope
   TEMPLATE-FILE: infra/webapp.bicep
-  SUBSCRIPTION-ID: ${{ secrets.SUBSCRIPTION_GITHUB_WORKFLOW_TEST_ID }}
+  SUBSCRIPTION-ID: ${{ secrets.SUBSCRIPTION_ID_PRODUCTION }}
   WEBAPP-NAME: eshoponweb-webapp-first
 
 
@@ -75,7 +75,7 @@ jobs:
     - name: Azure Login
       uses: azure/login@v2
       with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+        creds: ${{ secrets.AZURE_CREDENTIALS_PRODUCTION }}
            
     # Deploy Azure WebApp using Bicep file
     - name: deploy
